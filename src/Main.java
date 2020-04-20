@@ -4,16 +4,17 @@ public class Main {
         int countMonth = 12;   // Срок кредита
         float percent = 9.99F;  // Процентная ставка в процентах
         float monthlyPayment;   // Ежемесячный платеж
+        int monthlyPayment2;   // Ежемесячный платеж
 
         CreditCalculator creditCalculator = new CreditCalculator();
 
         monthlyPayment = creditCalculator.calculate(summ, countMonth, percent);
-        System.out.println ("Ежемесячный платёж = " + Math.floor(monthlyPayment));
+        System.out.println ("Ежемесячный платёж = " + (int) monthlyPayment);
 
         monthlyPayment = creditCalculator.calculate(summ, 24, percent);
-        System.out.println ("Ежемесячный платёж = " + Math.round(monthlyPayment));
+        System.out.println ("Ежемесячный платёж = " + (int) monthlyPayment);
 
         monthlyPayment = creditCalculator.calculate(summ, 36, percent);
-        System.out.println ("Ежемесячный платёж = " + Math.round(monthlyPayment));
+        System.out.println ("Ежемесячный платёж = " + (int) monthlyPayment);
     }
 }
