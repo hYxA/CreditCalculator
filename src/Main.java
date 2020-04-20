@@ -6,8 +6,14 @@ public class Main {
         float monthlyPayment;   // Ежемесячный платеж
 
         CreditCalculator creditCalculator = new CreditCalculator();
-        monthlyPayment = creditCalculator.calculate(summ, countMonth, percent);
 
-        System.out.printf("Ежемесячный платёж = " + monthlyPayment);
+        monthlyPayment = creditCalculator.calculate(summ, countMonth, percent);
+        System.out.println ("Ежемесячный платёж = " + Math.floor(monthlyPayment));
+
+        monthlyPayment = creditCalculator.calculate(summ, 24, percent);
+        System.out.println ("Ежемесячный платёж = " + Math.round(monthlyPayment));
+
+        monthlyPayment = creditCalculator.calculate(summ, 36, percent);
+        System.out.println ("Ежемесячный платёж = " + Math.round(monthlyPayment));
     }
 }
